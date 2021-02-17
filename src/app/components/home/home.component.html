@@ -1,0 +1,385 @@
+<div id="wrapper">
+    <app-slider></app-slider>
+    <app-header></app-header>
+
+    <!-- <app-menu></app-menu> -->
+
+    <!-- Document Content
+    ============================================= -->
+    <div id="content">
+        <!-- Welcome block
+        ============================================= -->
+        <section class="padding-100 welcome-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"> <img class="img-responsive" src="img/themes/pizza/art.jpg" alt=""> </div>
+                    <!-- Intro message -->
+                    <div class="col-md-6 text-center intro_message mt40">
+                        <!-- Head Title -->
+                        <div class="head_title">
+                            <i class="icon-intro"></i>
+                            <h1>ART OF PIZZA</h1>
+                            <span class="welcome">Welcome to mulino</span>
+                        </div>
+                        <!-- End# Head Title -->
+
+                        <p>Majesty is a team work of Majesty Restaurant Cafe, we aim at promoting the foodstuff industry
+                            through the branches , we establish and through the new dishes. and integrate between
+                            different cultures, by merging different Oriental and its western recipes</p>
+                        <a href="about.html" class="btn btn-gold">READ MORE</a>
+                    </div>
+                    <!-- End Intro message  -->
+                </div>
+            </div>
+        </section>
+        <!-- End Welcome block -->
+
+
+        <!-- Chef Message
+        ============================================= -->
+        <section id="slide2-01" class="chef-message dark text-center">
+            <!-- Bg Parallax -->
+            <div class="bcg background35" data-center="background-position: 50% 0px;"
+                data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;"
+                data-anchor-target="#slide2-01">
+                <!-- Bg Transparent -->
+                <div class="bg-transparent padding-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h1>Chef Message</h1>
+                                <p>We aim to home-produce as much as possiblefor the best quality, and to reduce food
+                                    miles. Our delicious cakes, traditional Devon scones, breads, soups, sauces and
+                                    accompaniments are produced in our own kitchens – and we use herbs from our gardens
+                                    when in season. Even our bottled water is produced in-house, using a sophisticated
+                                    seven-stage filtration.</p>
+                                <h2 class="signature">Micheal</h2>
+                            </div>
+                            <img src="img/home2/chef.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- End bg transparent -->
+            </div>
+            <!-- End Bg Parallax -->
+        </section>
+        <!-- End Chef message -->
+
+
+
+
+        <!-- Masonry Menu
+        ============================================= -->
+        <section class="masonry_menu padding-100 text-center ">
+            <!-- Head Title -->
+            <div class="head_title">
+                <i class="icon-intro"></i>
+                <h1>OUR MENU</h1>
+                <span class="welcome">Choose & Taste</span>
+            </div>
+            <!-- End# Head Title -->
+
+            <!-- Menu Bar -->
+            <div class="menu-bar dark mb60">
+                <!-- menu Filter
+                        ============================================= -->
+                <ul id="menu-fillter" class="clearfix">
+
+                    <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
+                    <li class="activeFilter"><a href="#" data-filter=".pf-137">Breakfast</a></li>
+                    <li class="activeFilter"><a href="#" data-filter=".pf-3">Burgers / Sandwich</a></li>
+
+                    <!-- <li *ngFor="let item of menuItems; index as i"><a href="#"
+                            data-filter="{{'.pf-' + item.item_id}}">{{item.item_name_en}}</a></li> -->
+                </ul>
+                <!-- #menu-filter end -->
+
+
+            </div>
+            <!-- End menu bar -->
+            <!-- Menu Items
+                        ============================================= -->
+            <div class="container">
+                <!-- Menu Items Masonary Content -->
+                <div id="menu-items" class="masonry-content dark clearfix">
+
+
+<div *ngFor="let item of menuItems; index as i">
+
+                    <!-- Menu Item -->
+                    <article *ngFor="let sitem of item.items; index as i" class="menu-item {{'pf-' + sitem.item_parent_id}}"  >
+                        <!-- Overlay Content -->
+                        <div class="overlay_content overlay-menu overlay-menu">
+                            <!-- Overlay Item -->
+                            <div class="overlay_item">
+                                <img src="{{'http://oms.mulino-ksa.com/'+sitem.item_photo}}" alt="">
+                                <div class="overlay">
+                                    <div class="icons">
+                                        <h3>{{sitem.item_name_en}}</h3>
+                                        <h3>{{sitem.item_price + '$'}}</h3>
+                                       
+                                        <!-- Button -->
+                                        <div class="button"> <a class="btn btn-gold" href="#"><i
+                                                    class="fa fa-shopping-cart"></i></a> <a class="btn btn-gold"
+                                                href="menu_single.html"><i class="fa fa-link"></i></a> </div>
+                                        <!-- End Button -->
+                                        <a class="close-overlay hidden">x</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Overlay Item -->
+                        </div>
+                        <!-- End Overlay Content -->
+                    </article>
+
+                </div>
+                    <!-- End Menu Item -->
+
+                </div>
+                <!-- #menu end -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- End masonry -->
+        <!-- RESERVATION 
+        ============================================= -->
+        <section id="slide2-03" class="reservation dark text-center">
+            <!-- Bg Parallax -->
+            <div class="bcg background37" data-center="background-position: 50% 0px;"
+                data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;"
+                data-anchor-target="#slide2-03">
+                <!-- Bg Transparent -->
+                <div class="bg-transparent padding-100">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Head Title -->
+                            <div class="head_title">
+                                <i class="icon-intro"></i>
+                                <h1>RESERVATION</h1>
+                                <span class="welcome">Book your table</span>
+                            </div>
+                            <!-- End# Head Title -->
+
+                            <!-- Reservation form style2-->
+                            <form class="reserv_form reserv_style2" action="reser-process.php" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <!-- Form group -->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <input name="name2" class="form-control" type="text"
+                                                            placeholder="Your Name *" required>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <input name="email2" class="form-control" type="email"
+                                                            placeholder="email">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <!-- Selct wrap -->
+                                                        <div class="select_wrap">
+                                                            <select class="form-control" name="occasion">
+                                                                <option value="one">Occasion *</option>
+                                                                <option value="d">One</option>
+                                                                <option value="two">Two</option>
+                                                                <option value="three">Three</option>
+                                                                <option value="four">Four</option>
+                                                                <option value="five">Five</option>
+                                                            </select>
+                                                        </div>
+                                                        <!-- End select wrap -->
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <!-- Selct wrap -->
+                                                        <div class="select_wrap">
+                                                            <select class="form-control" name="food">
+                                                                <option value="one">Preferred food *</option>
+                                                                <option value="d">One</option>
+                                                                <option value="two">Two</option>
+                                                                <option value="three">Three</option>
+                                                                <option value="four">Four</option>
+                                                                <option value="five">Five</option>
+                                                            </select>
+                                                        </div>
+                                                        <!-- End select wrap -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End form group -->
+                                            <!-- Form Group -->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <input name="branch" class="form-control" type="text"
+                                                            placeholder="Branch Name *" required>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <input name="personnum" class="form-control" type="text"
+                                                            placeholder="Number of Persons">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12">
+                                                        <input name="phone" class="form-control" type="tel"
+                                                            placeholder="Phone No.">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-sx-12 datepicker">
+                                                        <input name="date" class="form-control" id="datetimepicker"
+                                                            placeholder="Date" type="text">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End form group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- form group -->
+                                        <div class="form-group">
+                                            <textarea name="comment2" placeholder="Message"></textarea>
+                                        </div>
+                                        <!-- End form group -->
+                                    </div>
+                                </div>
+                                <div class="row element">
+                                    <div class="loading2"></div>
+                                    <button class="btn btn-gold white" name="submit" value="Send" id="reser-submit"
+                                        type="submit">BOOK YOUR TABLE</button>
+                                </div>
+                            </form>
+                            <!-- End reserv home -->
+                            <div class="done2">
+                                <strong>Thank you!</strong> We have received your message.
+                            </div>
+                            <!-- End reserv home -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End bg transparent -->
+            </div>
+            <!-- End Bg Parallax -->
+        </section>
+        <!-- End RESERVATION -->
+        <!-- Latest News
+        ============================================= -->
+        <section class="latest_news">
+            <div class="container">
+                <div class="row">
+                    <!-- Head Title -->
+                    <div class="head_title">
+                        <i class="icon-intro"></i>
+                        <h1>Latest News</h1>
+                        <span class="welcome">Stay up to Date</span>
+                    </div>
+                    <!-- End# Head Title -->
+
+                    <!-- End Latest news intro -->
+                    <!-- News Content -->
+                    <div class="news-content dark">
+                        <!-- News Item -->
+                        <div class="news-item col-md-4 col-sm-4 col-xs-12">
+                            <figure> <img class="img-responsive" src="img/blog/block4.jpg" alt="RELAXING AMBIENCE" />
+                                <figcaption class="text-center">
+                                    <div class="fig_container"> <i class="fa fa-picture-o"></i>
+                                        <h3><a href="blog_single_image.html">HAPPY CRISTMAS</a></h3>
+                                        <p>Event</p>
+                                        <div class="fig_content"> <a href="blog_single_image.html">Aenean commodo ligula
+                                                eget dolor enean massa. Cum sociis natoque penatibus.</a> </div>
+                                    </div>
+                                    <span class="btn btn-gold primary-bg white">30 DECEMBER 2015</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- End News Item -->
+                        <!-- News Item -->
+                        <div class="news-item col-md-4 col-sm-4 col-xs-12">
+                            <figure> <img class="img-responsive" src="img/blog/block5.jpg" alt="RELAXING AMBIENCE" />
+                                <figcaption class="text-center">
+                                    <div class="fig_container"> <i class="fa fa-video-camera"></i>
+                                        <h3><a href="blog_single_video.html">VALENTINE DAY</a></h3>
+                                        <p>news</p>
+                                        <div class="fig_content"> <a href="blog_single_video.html"> Aenean commodo
+                                                ligula eget dolor enean massa. Cum sociis natoque penatibus.</a> </div>
+                                    </div>
+                                    <span class="btn btn-gold primary-bg white">14 FEBURARY 2015</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- End News Item -->
+                        <!-- News Item -->
+                        <div class="news-item col-md-4 col-sm-4 col-xs-12 ">
+                            <figure> <img class="img-responsive" src="img/blog/block6.jpg" alt="RELAXING AMBIENCE" />
+                                <figcaption class="text-center">
+                                    <div class="fig_container"> <i class="fa fa-volume-up"></i>
+                                        <h3><a href="blog_single_soundclouds.html">Global orchestra</a></h3>
+                                        <p>Event</p>
+                                        <div class="fig_content"> <a href="blog_single_soundclouds.html">Aenean commodo
+                                                ligula eget dolor enean massa. Cum sociis natoque penatibus.</a> </div>
+                                    </div>
+                                    <span class="btn btn-gold primary-bg white">14 MAR4CH 2015</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- End News Item -->
+                    </div>
+                    <!-- End News Content -->
+                </div>
+            </div>
+        </section>
+        <!-- End latest News-->
+        <!-- App
+        ============================================= -->
+        <section id="slide-3-5" class="app dark">
+            <!-- Bg Parallax -->
+            <div class="bcg background38" data-center="background-position: 50% 0px;"
+                data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;"
+                data-anchor-target="#slide-3-5">
+                <!-- Bg transparent -->
+                <div class="bg-transparent padding-50">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-0">
+                                <!-- App Img  -->
+                                <img class="absolute" src="img/app.png" alt="">
+                                <!-- End App Img  -->
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                <!-- App Content -->
+                                <div class="padding-100 app_content">
+                                    <h1><span>Become</span> Life <span>More</span> Easier</h1>
+                                    <p class="italic">We aim to home-produce as much as possible – for the best quality,
+                                        and to reduce “food miles”. Our delicious cakes, traditional Devon scones,
+                                        breads, soups, sauces and accompaniments are Even our bottled water is produced
+                                        in-house, using a sophisticated seven-stage filtration .</p>
+                                    <!-- Buttons -->
+                                    <div class="buttons"> <a href="#" class="btn  btn-gold white">Google play store</a>
+                                        <a href="#" class="btn btn-gold white">Apple store</a> </div>
+                                    <!--End Buttons -->
+                                </div>
+                                <!-- End App Content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End bg transparent -->
+            </div>
+            <!-- End Bg Parallax -->
+        </section>
+        <!-- End app -->
+        <!-- Extra touch Block
+        ============================================= -->
+        <section class="extra_touch padding-100 text-center">
+            <div class="container">
+                <div class="row">
+                    <h2>Come & <span>Experiences</span> our best of world class cuisine</h2>
+                    <a href="contact.html" class="btn black btn-gold ">GET IN TOUCH</a>
+                </div>
+            </div>
+        </section>
+        <!-- End extra touch -->
+    </div>
+    <!-- End content !-->
+
+
+    <app-footer></app-footer>
+</div>
