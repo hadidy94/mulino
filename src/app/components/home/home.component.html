@@ -12,8 +12,7 @@
         <section class="padding-100 welcome-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6"> <img class="img-responsive" src="img/themes/pizza/art.jpg" alt=""> </div>
-                    <!-- Intro message -->
+                    <div class="vc_column_container col-sm-12 col-md-6"><div class="col_wrapper"><div class="wpb_text_column wpb_content_element "><div class="wpb_wrapper"><p><img class="img-responsive" src="http://majesty.mostafaa.net//wp-content/uploads/2015/07/art1.jpg?9c6d21&amp;9c6d21" alt="art"></p></div></div></div></div>                    <!-- Intro message -->
                     <div class="col-md-6 text-center intro_message mt40">
                         <!-- Head Title -->
                         <div class="head_title">
@@ -87,25 +86,24 @@
                                 <!-- Tab menu -->
                                 <div class="col-md-2 col-sm-3 col-xs-12 tab-menu">
                                     <div class="list-group">
-                                        <a *ngFor="let item of menuItems; index as i" href="#" class="list-group-item active text-center">{{item.item_name_en}} </a>
-                                        <a href="#" class="list-group-item text-center"> DISHES </a>
-                                        <a href="#" class="list-group-item text-center"> DESERT </a>
-                                        <a href="#" class="list-group-item text-center"> DRINKS </a>
+                                        <a *ngFor="let item of menuItems; index as i"  href="#" class="list-group-item text-center">{{item.item_name_en}} </a>
+                                        
                                     </div>
                                 </div>
                                 <!-- Tab menu -->
                                 <!-- Our Menu Tabs -->
                                 <div class="col-md-10 col-sm-9 col-xs-12 our-menu-tabs">
                                     <!-- Tab content  -->
-                                    <div class="tab-content active">
+                                    <div *ngFor="let item of menuItems; index as i" class="tab-content" ng-class="{'active'}">
                                         <!-- Our Menu Slider -->
                                         <div class="our-menu-slider">
                                             <!-- Item -->
-                                            <div class="item"> <img class="lazyOwl"
-                                                    src="img/menu/menu_home_1/starter_1.jpg" alt="Food menu">
+                                            <div *ngFor="let sitem of item.items" class="item"> 
+                                                <img class="lazyOwl"
+                                                    src="{{'http://oms.mulino-ksa.com/'+sitem.item_photo}}" alt="Food menu">
                                                 <!-- Item Description -->
                                                 <div class="item_desc">
-                                                    <h3>Starter Name <span class="price pull-right">$28.99</span></h3>
+                                                    <h3>{{sitem.item_name_en}} <span class="price pull-right">${{sitem.item_price + '$'}}</span></h3>
                                                     <!-- Rating -->
                                                     <fieldset class="rating">
                                                         <span class="active"><i class="fa fa-star"></i></span> <span
@@ -130,112 +128,6 @@
                                         <a href="menu_gird.html" class="view_all btn btn-gold ">View All STARTERS</a>
                                     </div>
                                     <!-- End Tab content -->
-                                    <!-- Tab content  -->
-                                    <div class="tab-content">
-                                        <!-- Our Menu Slider -->
-                                        <div class="our-menu-slider">
-                                            <!-- Item -->
-                                            <div class="item"><img class="lazyOwl"
-                                                    src="img/menu/menu_home_1/dishes_1.jpg" alt="Food menu">
-                                                <!-- Item description -->
-                                                <div class="item_desc">
-                                                    <h3>Dish Name <span class="price pull-right">$28.99</span></h3>
-                                                    <!-- Rating -->
-                                                    <fieldset class="rating">
-                                                        <span class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span>
-                                                    </fieldset>
-                                                    <!-- End rating -->
-                                                    <p>Aenean commodo ligula eget dolor enean massa. Cum sociis natoque
-                                                        penatibus.</p>
-                                                    <div class="form-group buttons"> <a class="btn btn-gold" href="#"><i
-                                                                class="fa fa-shopping-cart"></i></a> <a
-                                                            class="btn btn-gold" href="menu_single.html"><i
-                                                                class="fa fa-link"></i></a> </div>
-                                                </div>
-                                                <!-- End item description -->
-                                            </div>
-                                            <!-- End Item -->
-
-
-                                        </div>
-                                        <!-- End our menu slider -->
-                                        <a href="menu_gird.html" class="view_all btn btn-gold">View All Dishes</a>
-                                    </div>
-                                    <!-- End Tab content  -->
-                                    <!-- Tab content -->
-                                    <div class="tab-content">
-                                        <!-- Our Menu slider -->
-                                        <div class="our-menu-slider">
-                                            <!-- Item -->
-                                            <div class="item"> <img class="lazyOwl"
-                                                    src="img/menu/menu_home_1/desert_1.jpg" alt="Food menu">
-                                                <!-- Item Description -->
-                                                <div class="item_desc">
-                                                    <h3>Desert Name <span class="price pull-right">282.99 $</span></h3>
-                                                    <!-- Rating -->
-                                                    <fieldset class="rating">
-                                                        <span class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span>
-                                                    </fieldset>
-                                                    <!-- End rating -->
-                                                    <p>Aenean commodo ligula eget dolor enean massa. Cum sociis natoque
-                                                        penatibus.</p>
-                                                    <div class="form-group buttons"> <a class="btn btn-gold" href="#"><i
-                                                                class="fa fa-shopping-cart"></i></a> <a
-                                                            class="btn btn-gold" href="menu_single.html"><i
-                                                                class="fa fa-link"></i></a> </div>
-                                                </div>
-                                                <!-- End item description -->
-                                            </div>
-                                            <!-- End item -->
-
-                                        </div>
-                                        <!-- End menu slider -->
-                                        <a href="menu_gird.html" class="view_all btn btn-gold">View All Desert</a>
-                                    </div>
-                                    <!-- Tab content -->
-                                    <!-- Tab content -->
-                                    <div class="tab-content">
-                                        <!-- Our menu slider -->
-                                        <div class="our-menu-slider">
-                                            <!-- Item -->
-                                            <div class="item"> <img class="lazyOwl"
-                                                    src="img/menu/menu_home_1/drinks_1.jpg" alt="Food menu">
-                                                <!-- Item Description -->
-                                                <div class="item_desc">
-                                                    <h3>Drink Name <span class="price pull-right">282.99 $</span></h3>
-                                                    <!-- Rating -->
-                                                    <fieldset class="rating">
-                                                        <span class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span
-                                                            class="active"><i class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span> <span><i
-                                                                class="fa fa-star"></i></span>
-                                                    </fieldset>
-                                                    <!-- End rating -->
-                                                    <p>Aenean commodo ligula eget dolor enean massa. Cum sociis natoque
-                                                        penatibus.</p>
-                                                    <div class="form-group buttons"> <a class="btn btn-gold" href="#"><i
-                                                                class="fa fa-shopping-cart"></i></a> <a
-                                                            class="btn btn-gold" href="menu_single.html"><i
-                                                                class="fa fa-link"></i></a> </div>
-                                                </div>
-                                                <!-- End item description -->
-                                            </div>
-                                            <!-- End item -->
-
-                                        </div>
-                                        <!-- End menu slider -->
-                                        <a href="menu_gird.html" class="view_all btn btn-gold">View All Drinks</a>
-                                    </div>
-                                    <!-- Tab content -->
                                 </div>
                                 <!-- End Our Menu Tabs -->
                             </div>
