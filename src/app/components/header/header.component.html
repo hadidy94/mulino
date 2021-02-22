@@ -1,37 +1,66 @@
-<header id="header" class="center-header">
-    <div class="container">
+<!-- Header -->
+<header id="header" class="absolute transparent">
+
+  <div class="container">
       <div class="row">
-        <div id="main-menu-trigger"><i class="fa fa-bars"></i></div>
-        <!-- Logo
-                    ============================================= -->
-        <div id="logo"> <a href="index01.html" class="light-logo"><img src="../../../assets/img/mlogo.png" alt="Logo"></a> <a href="index01.html" class="dark-logo"><img src="../../../assets/img/mlogo.png" alt="Logo"></a> </div>
-        <!-- #logo end -->
-        <!-- Primary Navigation
-                    ============================================= -->
-        <nav id="main-menu" class="dark menu-center">
-          <ul>
-            <li><a href="index01.html">
-              <div>Home</div>
-              </a>
-            </li>
-            <li><a href="menu_gird.html">
-              <div>About Us</div>
-              </a> </li>
-              <li><a href="menu_gird.html">
-                <div>Menu</div>
-                </a> </li>
-            <li><a href="reservation.html">
-              <div>reservation</div>
-              </a> </li>
-            <li><a href="events.html">
-              <div>Events</div>
-              </a> </li>
-            <li><a href="contact.html">
-              <div>Contact</div>
-              </a> </li>
-          </ul>
-                 </nav>
-        <!-- #main-menu end -->
+          <div class="col-md-3">
+              <!-- Logo -->
+              <div class="module module-logo dark">
+                  <a href="index.html">
+                      <img src="assets/img/mlogo.png" alt="" width="88">
+                  </a>
+              </div>
+          </div>
+          <div class="col-md-9">
+              <!-- Navigation -->
+              <nav class="module module-navigation right mr-4">
+                  <ul id="nav-main" class="nav nav-main">
+                      <li>
+                          <a href="#">Home</a>
+                          
+                      <li>
+                          <a href="#">About</a>
+                          <div class="dropdown-container">
+                          </div>
+                      </li>
+                      <li>
+                          <a href="#">Menu</a>
+                          
+                      </li>
+                      <li><a href="page-offers.html">Book a table</a></li>
+                      <li><a href="page-contact.html">Contact</a></li>
+                      <li>   
+                          <a href="#">More</a>
+                      </li>
+                  </ul>
+              </nav>
+              <!-- <div class="module right">
+                  <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Order</span></a>
+              </div> -->
+          </div>
+          
       </div>
-    </div>
-  </header>
+  </div>
+
+</header>
+<!-- Header / End -->
+
+<!-- Header -->
+<header id="header-mobile" class="light">
+
+  <div class="module module-nav-toggle">
+      <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+  </div>    
+
+  <div class="module module-logo">
+      <a href="index.html">
+          <img src="assets/img/logo-horizontal-dark.svg" alt="">
+      </a>
+  </div>
+
+  <a href="#" class="module module-cart" data-toggle="panel-cart">
+      <i class="ti ti-shopping-cart"></i>
+      <span class="notification">2</span>
+  </a>
+
+</header>

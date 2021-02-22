@@ -9,14 +9,18 @@ import { Menu } from '../../interfaces/menu';
 })
 export class MenuComponent implements OnInit {
 
-  menuItems: Menu
+  menuItems: Menu;
+  isDataAvailable:boolean = false;
   constructor(private Menuservice: MenuService) { }
 
   ngOnInit(): void {
     this.Menuservice.gitAllMenu().subscribe((data: Menu) => {
-      this.menuItems = data
-      console.log(data);
+      this.menuItems = data;
+      // console.log(data);
+      this.isDataAvailable = true; // Now has value;
     });
   }
+
+  
 
 }
