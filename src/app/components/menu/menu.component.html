@@ -9,25 +9,31 @@
     
                 <div *ngFor="let item of menuItems; index as i" >
                 <div id="{{item.item_id}}" class="menu-category">
-                    <div class="menu-category-title collapse-toggle" role="tab" data-target="#sss" data-toggle="collapse" aria-expanded="true">
+                    <div class="menu-category-title collapse-toggle" role="tab" [attr.data-target]="'#ss' + item.item_id" data-toggle="collapse" aria-expanded="true">
                         <div class="bg-image" style="background-image: url('{{'http://oms.mulino-ksa.com/'+item.item_photo}}')">
                             <img src="{{'http://oms.mulino-ksa.com/'+item.item_photo}}"/>
                         </div>
                         <h2 class="title">{{item.item_name_en}}</h2>
                     </div>
-                    <div id="sss" class="menu-category-content collapse" >
+                    <div id="{{'ss'+item.item_id}}" class="menu-category-content collapse" >
                         <!-- Menu Item -->
     
     
                         <div *ngFor="let sitem of item.items" class="menu-item menu-list-item">
                             <div class="row align-items-center">
                                 <div class="col-sm-6 mb-2 mb-sm-0">
-                                    <h6 class="mb-0">{{sitem.item_name_en}}</h6>
-                                    <span class="text-muted text-sm">{{sitem.item_desc_en}}</span>
+                                    <div class="media">
+                                        <img class="mr-3" src="{{'http://oms.mulino-ksa.com/'+sitem.item_photo}}" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                          <h5 class="mb-0">{{sitem.item_name_en}}</h5>
+                                          <span class="text-muted text-sm">{{sitem.item_desc_en}}</span>
+                                        </div>
+                                      </div>
+                                    
                                 </div>
                                 <div class="col-sm-6 text-sm-right">
                                     <span class="text-md mr-4">{{sitem.item_price}} SAR</span>
-                                    <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button>
+                                    <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>View</span></button>
                                 </div>
                             </div>
                         </div>
