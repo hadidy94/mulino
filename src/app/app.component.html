@@ -1,1 +1,143 @@
+<!-- Body Wrapper -->
+<div id="body-wrapper" class="animsition">
+
+    <app-header></app-header>
+
+    <!-- Content -->
+    <div id="content">
+
+   
+
+        <div *ngIf="router.url !== '/'" class="page-title border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 push-lg-5">
+                        <h1 class="mb-0">About Us</h1>
+                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 <router-outlet></router-outlet>
+
+ <!-- Section -->
+ <section class="section section-lg dark bg-dark">
+
+    <!-- BG Image -->
+    <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+
+    <div class="container text-center">
+        <div class="col-lg-8 push-lg-2">
+            <h2 class="mb-3">Would you like to visit Us?</h2>
+            <h5 class="text-muted">Book a table even right now !</h5>
+            <a href="book-a-table.html" class="btn btn-outline-primary"><span>Book a table</span></a>
+        </div>
+    </div>
+
+</section>
+
+        <!-- Footer -->
+        <app-footer></app-footer>
+        <!-- Footer / End -->
+
+    </div>
+    <!-- Content / End -->
+
+   
+
+    <!-- Panel Cart -->
+    <div id="panel-cart">
+        <div class="panel-cart-container">
+            <div class="panel-cart-title">
+                <h5 class="title">Your Cart</h5>
+                <button class="close" data-toggle="panel-cart"><i class="ti ti-close"></i></button>
+            </div>
+            <div class="panel-cart-content">
+                <table class="table-cart">
+                    <tr>
+                        <td class="title">
+                            <span class="name"><a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a></span>
+                            <span class="caption text-muted">26”, deep-pan, thin-crust</span>
+                        </td>
+                        <td class="price">$9.82</td>
+                        <td class="actions">
+                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
+                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            <span class="name"><a href="#productModal" data-toggle="modal">Beef Burger</a></span>
+                            <span class="caption text-muted">Large (500g)</span>
+                        </td>
+                        <td class="price">$9.82</td>
+                        <td class="actions">
+                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
+                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            <span class="name"><a href="#productModal" data-toggle="modal">Extra Burger</a></span>
+                            <span class="caption text-muted">Small (200g)</span>
+                        </td>
+                        <td class="price text-success">$0.00</td>
+                        <td class="actions">
+                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
+                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            <span class="name">Weekend 20% OFF</span>
+                        </td>
+                        <td class="price text-success">-$8.22</td>
+                        <td class="actions"></td>
+                    </tr>
+                </table>
+                <div class="cart-summary">
+                    <div class="row">
+                        <div class="col-7 text-right text-muted">Order total:</div>
+                        <div class="col-5"><strong>$21.02</strong></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 text-right text-muted">Devliery:</div>
+                        <div class="col-5"><strong>$3.99</strong></div>
+                    </div>
+                    <hr class="hr-sm">
+                    <div class="row text-lg">
+                        <div class="col-7 text-right text-muted">Total:</div>
+                        <div class="col-5"><strong>$24.21</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+    </div>
+
+    <!-- Panel Mobile -->
+    <nav id="panel-mobile">
+        <div class="module module-logo bg-dark dark">
+            <a href="#">
+                <img src="assets/img/logo-light.svg" alt="" width="88">
+            </a>
+            <button class="close pmobile" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
+        </div>
+        <nav class="module module-navigation"></nav>
+        <div class="module module-social">
+            <h6 class="text-sm mb-3">Follow Us!</h6>
+            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
+            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <!-- Body Overlay -->
+    <div id="body-overlay"></div>
+
+</div>
+

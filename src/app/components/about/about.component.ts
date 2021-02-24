@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AboutService } from '../../services/about.service';
+
+
+interface about {
+  title: string;
+  body: string; 
+}
+
 
 @Component({
   selector: 'app-about',
@@ -7,16 +15,26 @@ import { AboutService } from '../../services/about.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  aboutItems;
+  aboutItems: about;
 
-  constructor(private aboutservices: AboutService) { }
+  router: string;
+
+  constructor(private aboutservices: AboutService, private _router: Router) { }
 
   ngOnInit(): void {
-    this.aboutservices.gitAllMenu().subscribe(data =>{
+
+    this.aboutservices.gitAllMenu().subscribe((data: about) =>{
       // var jsonData = JSON.stringify(data);
       this.aboutItems = data;
       // console.log(jsonData);
-    })
+    });
+
+
+    this.router = this._router.url; 
+     console.log(this.router);
   }
+
+
+
 
 }

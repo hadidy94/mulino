@@ -42,8 +42,14 @@ function hidePanelCart() {
 
 // Mobile Panel
 
-var $panelMobileToggle = $('[data-toggle="panel-mobile"]'),
+
+$("#nav-toggle").on('click',function(){
+    alert("The paragraph was clicked.");
+  });
+
+var $panelMobileToggle = $('.pmobile'),
     $panelMobile = $('#panel-mobile');
+
 
 function showPanelMobile() {
     $panelMobile.addClass('show');
@@ -199,6 +205,7 @@ var Core = {
                 return false;
             });
 
+
             // Mobile Navigation
             var $panelMobile = $('#panel-mobile');
 
@@ -219,6 +226,15 @@ var Core = {
                 }
                 return false;
             });
+
+            // $("#nav-toggle").click(function(){
+            //     if($panelMobile.hasClass('show')) {
+            //         hidePanelMobile();
+            //     } else {
+            //         showPanelMobile();
+            //     }
+            //     return false;
+            // });
 
         }
     },
